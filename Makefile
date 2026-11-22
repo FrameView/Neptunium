@@ -1,4 +1,4 @@
-SRC = chunk.c debug.c main.c memory.c value.c
+SRC = chunk.c debug.c main.c memory.c value.c vm.c
 OBJ = $(SRC:%.c=build/%.o)
 TARGET = build/neptunium
 
