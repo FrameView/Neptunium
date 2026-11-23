@@ -21,7 +21,7 @@ typedef enum {
 
 void initVirtualMachine(VM* vm);
 void freeVirtualMachine(VM* vm);
-InterpretResult interpret(VM* vm, Chunk* chunk);
+InterpretResult interpret(const char* source);
 void push(VM* vm, Value value);
 Value pop(VM* vm);
 
