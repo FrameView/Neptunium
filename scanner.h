@@ -17,10 +17,18 @@ typedef enum {
   // Literals.
   TOKEN_IDENTIFIER, TOKEN_STRING, TOKEN_NUMBER,
   // Keywords.
-  TOKEN_AND, TOKEN_OBJ, TOKEN_ELSE, TOKEN_FALSE,
-  TOKEN_FOR, TOKEN_FN, TOKEN_IF, TOKEN_NULL, TOKEN_OR,
-  TOKEN_PRINT, TOKEN_RET, TOKEN_BASE, TOKEN_THIS,
-  TOKEN_TRUE, TOKEN_VAR, TOKEN_WHILE,
+  TOKEN_AND, 
+  TOKEN_BASE, 
+  TOKEN_ECHO, TOKEN_ELSE, 
+  TOKEN_FALSE, TOKEN_FN, TOKEN_FOR,  
+  TOKEN_IF, 
+  TOKEN_NULL, 
+  TOKEN_OBJ, TOKEN_OR,
+  TOKEN_RET, 
+  TOKEN_THIS, TOKEN_TRUE,
+  TOKEN_UNTIL, 
+  TOKEN_VAR, 
+  TOKEN_WHILE,
   // Error , End Of File
   TOKEN_ERR, TOKEN_EOF
 } TokenType;
@@ -38,7 +46,7 @@ typedef struct {
     int line;
 } Token;
 
-void initScanner(Scanner* scanner, const char* source);
-Token scanToken(Scanner* scanner);
+void initScanner(Scanner* s, const char* source);
+Token scanToken(Scanner* s);
 
 #endif
